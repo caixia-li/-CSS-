@@ -1,0 +1,434 @@
+
+    .form {
+        border: 1px solid #dcdfe6;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .form-group {
+        margin: 15px;
+    }
+
+    form>.form-group label {
+        padding: 5px 10px;
+    }
+
+    form>.form-group input[type=text],
+    form>.form-group select {
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        height: 40px;
+        width: 380px;
+        line-height: 1;
+        border-radius: 4px;
+        border: 1px solid #dcdfe6;
+        box-sizing: border-box;
+        color: #606266;
+        display: inline-block;
+        font-size: inherit;
+        padding: 5px 15px;
+    }
+    form>.form-group select {
+        background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+        padding-right: 14px;
+    }
+    .form>.form-group input[type=text]:hover{
+        border: 1px solid #409eff;
+    }
+    form>.form-group select .placeholder{
+        color: #606266;
+        display: none;
+    }
+    form>.form-group select:hover{
+        border: 1px solid #409eff;
+    }
+    form>.form-group input[type=time],
+    form>.form-group input[type=date] {
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        height: 40px;
+        width: 174px;
+        line-height: 1;
+        border-radius: 4px;
+        border: 1px solid #dcdfe6;
+        box-sizing: border-box;
+        color: #606266;
+        display: inline-block;
+        font-size: inherit;
+        padding: 0 15px;
+    }
+   /* 更改type=date 的样式 */
+  /* 控制编辑区域的 */
+  input[type="date"]::-webkit-datetime-edit{
+            /* content: '起始时间'; */
+            color: rgb(188,188,188); 
+            padding-left: 10px;
+          }
+          /* 控制年月日这个区域的 */
+          /* input[type="date"]::-webkit-datetime-edit-fields-wrapper { 
+            background-color: #eee; 
+          }  */
+          /* 这是控制年月日之间的斜线或短横线的 */
+          input[type="date"]::-webkit-datetime-edit-text {
+            padding: 0 .3em; 
+          } 
+          /* 控制年字 */
+          /* input[type="date"]::-webkit-datetime-edit-year-field { 
+            color: purple; 
+          }  */
+          /* 控制月字 */
+          /* input[type="date"]::-webkit-datetime-edit-month-field { 
+            color: red; 
+          }  */
+          /* 控制日字 */
+          /* input[type="date"]::-webkit-datetime-edit-day-field  { 
+            color: pink; 
+          }  */
+        /*控制下拉小箭头的*/ 
+        input[type="date"]::-webkit-calendar-picker-indicator {
+          display: inline-block;
+          width: 5px;
+          height: 5px;
+          /* position: absolute;
+          top: 12px;
+          right: 0px; */
+          border: 1px solid #ccc;
+          border-radius: 2px;
+          box-shadow: inset 0 1px #fff, 0 1px #eee;
+          background-color: #eee;
+          /* background:url('../images/icon.png') -188px -99px; */
+          background-image: -webkit-linear-gradient(top, #f0f0f0, #e6e6e6);
+          color: #666; 
+        } 
+        /* 去掉date中上下小三角，但是保留input类型为number的小三角。 */
+        input[type=date]::-webkit-inner-spin-button { 
+          visibility: hidden; 
+        }
+        /*----------用来移除叉叉按钮 鼠标移上去还会显示----------*/ 
+        /* input[type="date"]::-webkit-clear-button{
+         display:none;
+        } */
+        input[type="time"]::-webkit-datetime-edit{
+            /* content: '起始时间'; */
+            color: rgb(188,188,188); 
+            padding-left: 10px;
+          }
+           /*控制下拉小箭头的*/ 
+        input[type="time"]::-webkit-calendar-picker-indicator {
+          display: inline-block;
+          width: 5px;
+          height: 5px;
+          border: 1px solid #ccc;
+          border-radius: 2px;
+          box-shadow: inset 0 1px #fff, 0 1px #eee;
+          background-color: #eee;
+          background-image: -webkit-linear-gradient(top, #f0f0f0, #e6e6e6);
+          color: #666; 
+        } 
+        /* 去掉date中上下小三角，但是保留input类型为number的小三角。 */
+        input[type=time]::-webkit-inner-spin-button { 
+          visibility: hidden; 
+        }
+   /*  */
+    form>.form-group input[type=checkbox].switch {
+        padding: 0 15px;
+        margin-bottom: -8px;
+    }
+
+    form>.form-group .option-menu-box {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    form>.form-group .option-menu-box .option-menu label {
+        display: inline-block;
+        width: 150px;
+        padding: 0px 10px 10px 10px;
+    }
+    form>.form-group .option-menu-box .option-menu{
+        display: block;
+    }
+    form>.form-group .option-menu-box .option-menu label.active{
+        color: #409eff;
+    }
+    form>.form-group .option-menu-box .option-menu input[type=checkbox] {
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        text-align: center;
+        vertical-align: baseline;
+        border: 1px solid #cccccc;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        border-radius: 2px;
+        margin-bottom: -2px;
+        position: relative;
+    }
+    form>.form-group .option-menu-box .option-menu input[type=checkbox]::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0; 
+    }
+    form>.form-group .option-menu-box .option-menu input[type=checkbox]:checked:before{
+        content: "\2713";
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        background-color: #409eff;
+        border: 1px solid #409eff;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+    form>.form-group .option-menu-box .option-menu input[type=checkbox]:checked{
+        border: 1px solid #409eff;
+    }
+    form>.form-group .option-menu-box .option-menu input[type=checkbox]:checked+label{
+        color:#409eff ;
+    }
+    form>.form-group .option-menu-box .option-menu input[type=checkbox]:hover{
+        border: 1px solid #409eff;
+    }
+    form>.form-group .option-menu-box .option-menu input[type=radio] {
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        border: 1px solid #dcdfe6;
+        margin-bottom: -2px;
+    }
+    form>.form-group .option-menu-box .option-menu input[type=radio]:checked{
+        border: 4px solid #409eff;
+    }
+
+    form>.form-group textarea {
+        vertical-align: top;
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        height: 80px;
+        width: 380px;
+        line-height: 1;
+        border-radius: 4px;
+        border: 1px solid #dcdfe6;
+        box-sizing: border-box;
+        color: #606266;
+        display: inline-block;
+        font-size: inherit;
+        padding: 0 15px;
+    }
+    form>.form-group textarea:hover{
+        border: 1px solid #409eff;
+    }
+    .form-group .form-group-button {
+        margin-left: 79px
+    }
+
+    .form-group .form-group-button .cx-btn {
+        margin-right: 10px;
+    }
+
+    /*横向表单 */
+    form .form-inline {
+        display: inline-block;
+    }
+
+    form>.form-inline label {
+        padding: 5px 10px;
+    }
+
+    form>.form-inline input[type=text],
+    form>.form-inline select {
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        height: 40px;
+        width: 150px;
+        line-height: 1;
+        border-radius: 4px;
+        border: 1px solid #dcdfe6;
+        box-sizing: border-box;
+        color: #606266;
+        display: inline-block;
+        font-size: inherit;
+        padding: 0 15px;
+    }
+    form>.form-inline select {
+        background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+        padding-right: 14px;
+    }
+    form>.form-inline input[type=text]:hover,
+    form>.form-inline select:hover{
+        border: 1px solid #409eff;
+    }
+    form>.form-inline .cx-btn {
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    /* 对齐方式 */
+    .form-align-title{
+        margin: 10px;
+    }
+    .form-align-title .cx-btn{
+        margin-left: -5px;
+    }
+    .form-align-title .cx-btn.active{
+        background-color: #409eff;
+        color: #fff;
+        border-color: #409eff;
+    }
+    .form-align-title .cx-btn:hover{
+        color: #409eff;
+        background-color: #fff;
+        border: 1px solid #dcdfe6;
+    }
+    form .form-align-left input[type=text],
+    form .form-align-right input[type=text],
+    form .form-align-top input[type=text]{
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        height: 40px;
+        width: 380px;
+        line-height: 1;
+        border-radius: 4px;
+        border: 1px solid #dcdfe6;
+        box-sizing: border-box;
+        color: #606266;
+        display: inline-block;
+        font-size: inherit;
+        padding: 5px 15px;
+    }
+    form .form-align-left input[type=text]:hover,
+    form .form-align-right input[type=text]:hover,
+    form .form-align-top input[type=text]:hover{
+        border: 1px solid #409eff; 
+    }
+
+/* 对齐方式：左对齐 */
+    .form-align-left{
+        margin: 10px;
+    }
+    .form-align-left label{
+        padding: 5px 10px;
+        display: inline-block;
+        width: 80px;
+    }
+    /* 对齐方式：右对齐 */
+    .form-align-right{
+        margin: 10px;
+    }
+    .form-align-right label{
+        padding: 5px 10px;
+        display: inline-block;
+        width: 80px;
+        text-align: right;
+    }
+    /* 对齐方式：顶部对齐 */
+    .form-align-top{
+        margin: 10px;
+    }
+    .form-align-top label{
+        padding: 5px 10px;
+        display: block;
+        width: 80px;
+    }
+    /* 自定义校验方式 */
+    form .demo-ruleForm{
+        margin: 10px;
+    }
+    form .demo-ruleForm label{
+        display: inline-block;
+        padding: 5px 10px;
+        width: 80px;
+    }
+    form .demo-ruleForm input[type=password],
+    form .demo-ruleForm input[type=number]{
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        height: 40px;
+        width: 380px;
+        line-height: 1;
+        border-radius: 4px;
+        border: 1px solid #dcdfe6;
+        box-sizing: border-box;
+        color: #606266;
+        display: inline-block;
+        font-size: inherit;
+        padding: 5px 15px;
+    }
+    form .demo-ruleForm input[type=password]:hover,
+    form .demo-ruleForm input[type=number]:hover{
+        border: 1px solid #409eff; 
+    }
+    form .demo-ruleForm .demo-ruleForm-btnBox{
+        margin-left: 80px;
+    } 
+    form .demo-ruleForm .cx-btn{
+        margin-right: 10px;
+    }
+
+
+    /* 表单型号 */
+    form .form-group.form-xs input[type=text],
+    form .form-group.form-xs select{
+        height: 30px;
+    }
+    form>.form-group.form-xs input[type=time],
+    form>.form-group.form-xs input[type=date]{
+        height: 30px;
+    }
+   .form-group .checkbox-group{
+       display: inline-block;
+    }
+    .form-group .checkbox-group .cx-btn{
+        margin-left: -5px;
+    }
+    .form-group .checkbox-group .cx-btn.active{
+        background-color: #409eff;
+        color: #fff;
+        border-color: #409eff;
+    }
+    .form-group .checkbox-group .cx-btn:hover{
+        color: #409eff;
+        background-color: #fff;
+        border: 1px solid #dcdfe6;
+    }
+    .form-group .checkbox-group-box{
+        display: inline-block;
+        vertical-align: top;
+    }
+    .form-group .checkbox-group-box .radio-box{
+        display: inline-block;
+        margin:0px  10px;
+        border: 1px solid #dcdfe6;
+        padding: 5px 10px;
+    }
+    form>.form-group .checkbox-group-box input[type=radio] {
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        border: 1px solid #dcdfe6;
+        margin-bottom: -2px;
+    }
+    form>.form-group  input[type=radio]:checked{
+        border: 4px solid #409eff;
+    }
+    form>.form-group  input[type=radio]:checked+label{
+        color:#409eff ;
+    }
+    form>.form-group .radio-box:hover{
+        border: 1px solid #409eff;
+    }
